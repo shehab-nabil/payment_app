@@ -23,7 +23,7 @@ class PaymentDetailsView extends StatelessWidget {
           style: Styles.style25,
         ),
       ),
-      body: const PaymentDetailsViewBody(),
+      body: PaymentDetailsViewBody(),
     );
   }
 }
