@@ -6,13 +6,13 @@ class ThankYouView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
-        children: [
-          ThankYouBody(),
-        ],
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
       ),
+      body: Transform.translate(
+          offset: const Offset(0, -30), child: const ThankYouBody()),
     );
   }
 }

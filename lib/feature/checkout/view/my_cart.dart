@@ -14,7 +14,7 @@ class MyCartView extends StatelessWidget {
         centerTitle: true,
         leading:
             IconButton(onPressed: () {}, icon: const Icon(Icons.arrow_back)),
-        title: Text(
+        title: const Text(
           ' My Cart',
           textAlign: TextAlign.center,
           style: Styles.style25,

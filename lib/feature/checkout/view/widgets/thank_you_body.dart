@@ -16,21 +16,21 @@ class ThankYouBody extends StatelessWidget {
           children: [
             const ThankYouCard(),
             Positioned(
-              bottom: MediaQuery.sizeOf(context).height / 4 + 20,
+              bottom: MediaQuery.sizeOf(context).height / 5 + 20,
               right: 25,
               left: 25,
               child: const CustomDashedLine(),
             ),
             Positioned(
               left: -20,
-              bottom: MediaQuery.sizeOf(context).height / 4,
+              bottom: MediaQuery.sizeOf(context).height / 5,
               child: const CircleAvatar(
                 backgroundColor: Colors.white,
               ),
             ),
             Positioned(
               right: -20,
-              bottom: MediaQuery.sizeOf(context).height / 4,
+              bottom: MediaQuery.sizeOf(context).height / 5,
               child: const CircleAvatar(
                 backgroundColor: Colors.white,
               ),

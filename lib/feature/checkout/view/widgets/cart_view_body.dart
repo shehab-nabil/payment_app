@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:payment_app/core/utils/styles.dart';
 import 'package:payment_app/core/widgets/custom_button.dart';
-import 'package:payment_app/feature/checkout/view/payment_details.dart';
 import 'package:payment_app/feature/checkout/view/widgets/order_info_item.dart';
+import 'package:payment_app/feature/checkout/view/widgets/payment_methods_bootom_sheet.dart';
 
 class MyCartViewBody extends StatelessWidget {
   const MyCartViewBody({super.key});
@@ -35,7 +35,7 @@ class MyCartViewBody extends StatelessWidget {
               height: 20,
             ),
             const Divider(height: 20, indent: 15, endIndent: 15),
-            OrderInfoItem(
+            const OrderInfoItem(
               title: 'Total',
               price: '\$ 50.97',
               style: Styles.style24,
@@ -45,10 +45,16 @@ class MyCartViewBody extends StatelessWidget {
             ),
             CustomButton(
               onTap: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) {
-                  return const PaymentDetailsView();
-                }));
+                // Navigator.of(context)
+                //     .push(MaterialPageRoute(builder: (context) {
+                //   return const PaymentDetailsView();
+                // }));
+                showModalBottomSheet(
+                    backgroundColor: Colors.white,
+                    context: context,
+                    builder: (context) {
+                      return const PaymentMethodsBootomSheet();
+                    });
               },
               text: 'Complete Payment',
             )
