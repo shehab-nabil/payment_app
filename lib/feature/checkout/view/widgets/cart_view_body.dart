@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:payment_app/core/utils/styles.dart';
 import 'package:payment_app/core/widgets/custom_button.dart';
+import 'package:payment_app/feature/checkout/data/repository/checkout_repos.dart';
+import 'package:payment_app/feature/checkout/manager/payment_cubit/payment_cubit.dart';
 import 'package:payment_app/feature/checkout/view/widgets/order_info_item.dart';
 import 'package:payment_app/feature/checkout/view/widgets/payment_methods_bootom_sheet.dart';
 
@@ -53,7 +56,11 @@ class MyCartViewBody extends StatelessWidget {
                     backgroundColor: Colors.white,
                     context: context,
                     builder: (context) {
-                      return const PaymentMethodsBootomSheet();
+                      return BlocProvider(
+                        create: (context) =>
+                            PaymentCubit(CheckoutRepositoryImpl()),
+                        child: const PaymentMethodsBootomSheet(),
+                      );
                     });
               },
               text: 'Complete Payment',

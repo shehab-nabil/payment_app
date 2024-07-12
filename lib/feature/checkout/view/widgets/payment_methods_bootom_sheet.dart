@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:payment_app/core/widgets/custom_button.dart';
+import 'package:payment_app/feature/checkout/view/widgets/custom_button_bloc_consumer.dart';
 import 'package:payment_app/feature/checkout/view/widgets/payment_method_list.dart';
 
 class PaymentMethodsBootomSheet extends StatelessWidget {
@@ -19,7 +19,7 @@ class PaymentMethodsBootomSheet extends StatelessWidget {
           SizedBox(
             height: 32,
           ),
-          CustomButton(text: 'continue'),
+          CustomButtonBlocConsumer(),
         ],
       ),
     );

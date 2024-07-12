@@ -8,7 +8,7 @@ abstract class CheckoutRepository {
       {required PaymentIntentInputModel paymentIntentInputModel});
 }
 
-abstract class CheckoutRepositoryImpl extends CheckoutRepository {
+class CheckoutRepositoryImpl extends CheckoutRepository {
   final StripService stripService = StripService();
 
   @override
